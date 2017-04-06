@@ -4,7 +4,7 @@ from tkinter import *
 # Define empty outer window
 window=Tk()
 
-
+# sam command function. Need better structure to pass values to text. 
 def sam():
     print("debug")
 
@@ -23,3 +23,6 @@ b3.grid(row=2,column=1)
 # Adding widgets to the window
 t1=Text(window)
 t1.grid(row=1,column=2)
+
+# Call mainloop
+window.mainloop()
