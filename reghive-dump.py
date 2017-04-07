@@ -5,7 +5,7 @@ from tkinter import *
 window=Tk()
 
 window.title("Reghive-Dumper")
-window.geometry('800x400')
+window.geometry('450x450')
 window.configure(bg='black')
 
 # sam command function. Need better structure to pass values to text.
@@ -16,36 +16,28 @@ def exit():
     print("Goodbye!")
     window.quit()
 
-def logo():
-    logo='''
-    ____                __     _                      ____
-   / __ \ ___   ____ _ / /_   (_)_   __ ___          / __ \ __  __ ____ ___   ____   ___   _____
-  / /_/ // _ \ / __ `// __ \ / /| | / // _ \ ______ / / / // / / // __ `__ \ / __ \ / _ \ / ___/
- / _, _//  __// /_/ // / / // / | |/ //  __//_____// /_/ // /_/ // / / / / // /_/ //  __// /
-/_/ |_| \___/ \__, //_/ /_//_/  |___/ \___/       /_____/ \__,_//_/ /_/ /_// .___/ \___//_/
-             /____/                                                       /_/
+logo=r"""
+Reghive-Dumper
 [+] Author: Viral Maniar
 [+] Twitter: @ManiarViral
-    '''
-    print (logo())
-
-t1 = Text(window, text="")
-t1.grid()
+"""
+l1 = Label(window,bg='green',justify=LEFT, text=logo, font=("Bauhaus 93", 25))
+l1.pack()
 
 # Creating button for the SAM key
-b1 = Button(window, text="Save SAM",command=sam)
-b1.grid(row=10,column=1)
+b1 = Button(window, text="Save SAM",command=sam).pack()
+#b1.grid(row=350,column=350)
 
 # Creating button for the SECURITY key
-b2 = Button(window, text="Save SECURITY")
-b2.grid(row=10,column=2)
+b2 = Button(window, text="Save SECURITY").pack()
+#b2.grid(row=150,column=2)
 
 # Creating button for the SYSTEM key
-b3 = Button(window, text="Save SYSTEM")
-b3.grid(row=10,column=3)
+b3 = Button(window, text="Save SYSTEM").pack()
+#b3.grid(row=150,column=3)
 
-b4 = Button(window, text="EXIT",command=exit)
-b4.grid(row=10,column=4)
+b4 = Button(window, text="EXIT",command=exit).pack()
+#b4.grid(row=150,column=4)
 
 # Adding widgets to the window
 '''t1=Text(window)
